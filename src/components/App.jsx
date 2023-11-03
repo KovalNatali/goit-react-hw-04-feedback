@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Statistics } from './Statistics/Statistics';
-import { ButtonOptions } from './FeedbackOptions/ButtonOptions';
+import { ButtonOptions } from './FeedbackOptions/ButtonOptions.1';
 import { SectionTitle } from './SectionTitle/SectionTitle';
 import { Notification } from './Notification/Notification';
 
@@ -32,7 +32,10 @@ export const App = () => {
   return (
     <div>
       <SectionTitle title="Please leave feedback">
-        <ButtonOptions onLeaveFeedback={addFeedback}></ButtonOptions>
+        <ButtonOptions
+          onLeaveFeedback={addFeedback}
+          options={['good', 'neutral', 'bad']}
+        ></ButtonOptions>
       </SectionTitle>
       <SectionTitle title="Statistics">
         {total !== 0 ? (
